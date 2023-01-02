@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        const data = "<% projects %>"
+     </script>
+</head>
+<body>
+    projects
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>project_id</th>
+            <th>project_title</th>
+            <th>description</th>
+            <th>ishtml</th>
+            <th>user_id</th>
+            <th>username</th>
+          </tr>
+         
+          <% for( let index = 0; index < projects.length; index++ ) { %>
+            <tr>
+                <td><% projects[index].ID %> </td>
+                <td><% projects[index].project_id %> </td>
+                <td><% projects[index].project_title %></td>
+                <td><% projects[index].description %></td>
+                <td><% projects[index].ishtml %></td>
+                <td><% projects[index].user_id %></td>
+                <td><% projects[index].username %></td>
+              </tr>
+          <% } %>
+        
+    </table>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        const data = "<% subusers %>"
+     </script>
+</head>
+<body>
+    subusers
+    <table>
+        <tr>
+            <th>Username</th>
+            <th>paymethod</th>
+            <th>startdate</th>
+            <th>active</th>
+          </tr>
+         
+          <% for( let index = 0; index < subusers.length; index++ ) { %>
+            <tr>
+                <td><% subusers[index].username %> </td>
+                <td><% subusers[index].paymethod %> </td>
+                <td><% subusers[index].startdate %></td>
+                <td><% subusers[index].active %></td>
+              </tr>
+          <% } %>
+        
+    </table>
+</body>
+</html>

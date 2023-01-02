@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+       const data = "<% users %>"
+    </script>
+</head>
+<body>
+    users
+    <table>
+        <tr>
+            <th>Username</th>
+            <th>Password</th>
+            <th>Email</th>
+            <th>first_name</th>
+            <th>last_name</th>
+            <th>lastseen</th>
+          </tr>
+         
+          <% for( let index = 0; index < users.length; index++ ) { %>
+            <tr>
+                <td><% users[index].username %> </td>
+                <td><% users[index].password %> </td>
+                <td><% users[index].email %></td>
+                <td><% users[index].first_name %></td>
+                <td><% users[index].last_name %></td>
+                <td><% users[index].lastseen %></td>
+              </tr>
+          <% } %>
+        
+    </table>
+</body>
+</html>
